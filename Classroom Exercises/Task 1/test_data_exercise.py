@@ -1,7 +1,14 @@
+#Daniel Ogunlana
+#10/02/2015
+#Classroom exercises task 1
+
 def get_test_results():
     test_results = []
-    for test in range(3):
-        test_results.append(int(input("Please enter a score: ")))
+    with open("test_data.txt",mode="r",encoding="utf-8") as test_data:
+        for result in test_data:
+            test_results.append(int(result))            
+    #for test in range(3):
+        #test_results.append(int(input("Please enter a score: ")))
     return test_results
 
 def average_test_result(results):
